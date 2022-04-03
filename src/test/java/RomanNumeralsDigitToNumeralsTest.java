@@ -48,4 +48,37 @@ class RomanNumeralsDigitToNumeralsTest {
         assertEquals("CCXXVI",actual);
     }
 
+    @Test
+    public void convert4ToIV(){
+        //act
+        RomanNumeralsDigitToNumerals romanObj = new RomanNumeralsDigitToNumerals();
+        //arrange
+        int digit = 4;
+        String actual = romanObj.convertDigitToRomanNumeral(digit);
+        //assert
+        assertEquals("IV",actual);
+    }
+
+    @Test
+    public void convert90ToXC(){
+        //act
+        RomanNumeralsDigitToNumerals romanObj = new RomanNumeralsDigitToNumerals();
+        //arrange
+        int digit = 90;
+        String actual = romanObj.convertDigitToRomanNumeral(digit);
+        //assert
+        assertEquals("XC",actual);
+    }
+
+    @Test
+    public void convert499ToCDXCIX(){
+        //act
+        RomanNumeralsDigitToNumerals romanObj = new RomanNumeralsDigitToNumerals();
+        //arrange
+        int digit = 499;
+        String actual = romanObj.convertDigitToRomanNumeral(digit);
+        //assert
+        assertEquals("CDXCIX",actual);
+    }
+
 }
