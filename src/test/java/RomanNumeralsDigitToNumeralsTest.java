@@ -26,4 +26,26 @@ class RomanNumeralsDigitToNumeralsTest {
         assertEquals("VII",actual);
     }
 
+    @Test
+    public void convert88ToLXXXVIII(){
+        //act
+        RomanNumeralsDigitToNumerals romanObj = new RomanNumeralsDigitToNumerals();
+        //arrange
+        int digit = 88;
+        String actual = romanObj.convertDigitToRomanNumeral(digit);
+        //assert
+        assertEquals("LXXXVIII",actual);
+    }
+
+    @Test
+    public void convert226ToCCXXVI(){
+        //act
+        RomanNumeralsDigitToNumerals romanObj = new RomanNumeralsDigitToNumerals();
+        //arrange
+        int digit = 226;
+        String actual = romanObj.convertDigitToRomanNumeral(digit);
+        //assert
+        assertEquals("CCXXVI",actual);
+    }
+
 }
