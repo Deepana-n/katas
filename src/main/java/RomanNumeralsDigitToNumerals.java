@@ -1,9 +1,9 @@
-import java.util.HashMap;
+import java.util.TreeMap;
 
 public class RomanNumeralsDigitToNumerals {
-    private static final HashMap<Integer,String> romanLettersMap = new HashMap<>();
+    private static final TreeMap<Integer,String> romanLettersMap = new TreeMap<>();
 
-    private static HashMap<Integer,String> createRomanLettersMap(){
+    private static TreeMap<Integer,String> createRomanLettersMap(){
         romanLettersMap.put(1,"I");
         romanLettersMap.put(5,"V");
         romanLettersMap.put(10,"X");
@@ -14,10 +14,23 @@ public class RomanNumeralsDigitToNumerals {
     }
 
     public String convertDigitToRomanNumeral(int digit){
-        String romanNumeral = "";
+        StringBuilder romanNumeral = new StringBuilder();
+        int ceilingDifference = createRomanLettersMap().ceilingKey(digit)-digit ;
+        int floorDifference = Math.abs(createRomanLettersMap().floorKey(digit)-digit) ;
         if(createRomanLettersMap().containsKey(digit)){
-            romanNumeral = createRomanLettersMap().get(digit);
+            romanNumeral.append(createRomanLettersMap().get(digit));
+        }else{
+            romanNumeral.append(createRomanLettersMap().get(createRomanLettersMap().floorKey(digit)));
+            int difference = floorDifference;
+            while(difference > 0){
+                int currentDigit = createRomanLettersMap().floorKey(difference);
+                String convertCurrentDigitToRomanNumeral = createRomanLettersMap().get(currentDigit);
+                romanNumeral.append(convertCurrentDigitToRomanNumeral);
+                difference -= currentDigit;
+            }
         }
-        return romanNumeral;
+
+        System.out.println(romanNumeral.toString());
+        return romanNumeral.toString();
     }
 }

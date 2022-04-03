@@ -15,4 +15,15 @@ class RomanNumeralsDigitToNumeralsTest {
         assertEquals("I",actual);
     }
 
+    @Test
+    public void convert7ToVII(){
+        //act
+        RomanNumeralsDigitToNumerals romanObj = new RomanNumeralsDigitToNumerals();
+        //arrange
+        int digit = 7;
+        String actual = romanObj.convertDigitToRomanNumeral(digit);
+        //assert
+        assertEquals("VII",actual);
+    }
+
 }
