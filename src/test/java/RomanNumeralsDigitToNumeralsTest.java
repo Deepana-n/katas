@@ -81,4 +81,17 @@ class RomanNumeralsDigitToNumeralsTest {
         assertEquals("CDXCIX",actual);
     }
 
+    @Test
+    public void convert758ToDCCLVIII(){
+        //act
+        RomanNumeralsDigitToNumerals romanObj = new RomanNumeralsDigitToNumerals();
+        //arrange
+        int digit = 758;
+        String actual = romanObj.convertDigitToRomanNumeral(digit);
+        //assert
+        assertEquals("DCCLVIII",actual);
+    }
+
+
+
 }
