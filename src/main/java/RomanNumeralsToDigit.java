@@ -8,12 +8,18 @@ public class RomanNumeralsToDigit {
         numeralMap.put('V',5);
         int digit = 0;
 
-        for(char numeral : romanNumeral.toCharArray()){
-            if(numeralMap.containsKey(numeral)){
-                digit+=numeralMap.get(numeral);
+       for(int i =0; i<romanNumeral.length()-1;i++){
+           char cur = romanNumeral.charAt(i);
+           char next = romanNumeral.charAt(i+1);
+            if(numeralMap.get(cur) < numeralMap.get(next)) {
+                digit -= numeralMap.get(cur);
+            }else{
+                digit += numeralMap.get(cur);
             }
         }
 
-        return String.valueOf(digit);
+       int lastCharacterValue = numeralMap.get(romanNumeral.charAt(romanNumeral.length()-1));
+
+        return String.valueOf(digit+lastCharacterValue);
     }
 }
