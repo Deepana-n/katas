@@ -6,6 +6,7 @@ public class RomanNumeralsToDigit {
         HashMap<Character,Integer> numeralMap = new HashMap<>();
         numeralMap.put('I',1);
         numeralMap.put('V',5);
+        numeralMap.put('X',10);
         int digit = 0;
 
        for(int i =0; i<romanNumeral.length()-1;i++){

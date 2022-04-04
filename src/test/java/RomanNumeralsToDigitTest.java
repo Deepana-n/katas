@@ -35,4 +35,12 @@ class RomanNumeralsToDigitTest {
         assertEquals("4",romanObj.convertRomanNumeralsToDigit("IV"));
     }
 
+    @Test
+    public void convertIXto9(){
+        //arrange
+        RomanNumeralsToDigit romanObj = new RomanNumeralsToDigit();
+        //act & assert
+        assertEquals("9",romanObj.convertRomanNumeralsToDigit("IX"));
+    }
+
 }
