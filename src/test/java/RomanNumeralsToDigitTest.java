@@ -19,4 +19,12 @@ class RomanNumeralsToDigitTest {
         assertEquals("2",romanObj.convertRomanNumeralsToDigit("II"));
     }
 
+    @Test
+    public void convertVIto6(){
+        //arrange
+        RomanNumeralsToDigit romanObj = new RomanNumeralsToDigit();
+        //act & assert
+        assertEquals("6",romanObj.convertRomanNumeralsToDigit("VI"));
+    }
+
 }
