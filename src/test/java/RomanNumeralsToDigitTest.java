@@ -43,4 +43,13 @@ class RomanNumeralsToDigitTest {
         assertEquals("9",romanObj.convertRomanNumeralsToDigit("IX"));
     }
 
+    @Test
+    public void convertInvalidRomanNumeralRepeated4Times(){
+        //arrange
+        RomanNumeralsToDigit romanObj = new RomanNumeralsToDigit();
+        //act & assert
+        assertEquals("Invalid roman numeral. Should not repeat same numeral 4x.",romanObj.convertRomanNumeralsToDigit("IIII"));
+        assertEquals("Invalid roman numeral. Should not repeat same numeral 4x.",romanObj.convertRomanNumeralsToDigit("VIIII"));
+    }
+
 }

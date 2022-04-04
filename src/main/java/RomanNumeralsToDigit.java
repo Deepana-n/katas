@@ -4,6 +4,8 @@ public class RomanNumeralsToDigit {
 
     public String convertRomanNumeralsToDigit(String romanNumeral){
         HashMap<Character,Integer> numeralMap = new HashMap<>();
+        String pattern = "(^(?=[XVI])(I[XV]|V?I{0,3})$)";
+        if(!romanNumeral.matches(pattern)) return "Invalid roman numeral. Should not repeat same numeral 4x.";
         numeralMap.put('I',1);
         numeralMap.put('V',5);
         numeralMap.put('X',10);
