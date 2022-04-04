@@ -1,7 +1,18 @@
+import java.util.HashMap;
+
 public class RomanNumeralsToDigit {
 
     public String convertRomanNumeralsToDigit(String romanNumeral){
-        if(romanNumeral.equals("I")) return "1";
-        return "";
+        HashMap<Character,Integer> numeralMap = new HashMap<>();
+        numeralMap.put('I',1);
+        int digit = 0;
+
+        for(char numeral : romanNumeral.toCharArray()){
+            if(numeralMap.containsKey(numeral)){
+                digit+=numeralMap.get(numeral);
+            }
+        }
+
+        return String.valueOf(digit);
     }
 }

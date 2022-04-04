@@ -11,4 +11,12 @@ class RomanNumeralsToDigitTest {
         assertEquals("1",romanObj.convertRomanNumeralsToDigit("I"));
     }
 
+    @Test
+    public void convertIIto2(){
+        //arrange
+        RomanNumeralsToDigit romanObj = new RomanNumeralsToDigit();
+        //act & assert
+        assertEquals("2",romanObj.convertRomanNumeralsToDigit("II"));
+    }
+
 }
