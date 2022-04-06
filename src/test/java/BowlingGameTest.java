@@ -181,4 +181,42 @@ class BowlingGameTest {
 
     }
 
+    @Test
+    public void CheckRandomPairs3(){
+        //arrange
+        BowlingGame bowlingObj = new BowlingGame();
+        //act
+        String[] scoringArr =  {"1-", "X", "53", "4-", "-9", "5/", "6/", "62", "8/", "34"};
+        // 14 13 12 11 10 20 20 14 18 18
+        int actual = bowlingObj.bowl(scoringArr);
+        //assert
+        assertEquals(100,actual);
+
+    }
+
+    @Test
+    public void CheckRandomPairs4(){
+        //arrange
+        BowlingGame bowlingObj = new BowlingGame();
+        //act
+        String[] scoringArr =  {"--", "5/", "4/", "53", "33", "22", "4/", "5/", "45", "12"};
+        // 14 13 12 11 10 20 20 14 18 18
+        int actual = bowlingObj.bowl(scoringArr);
+        //assert
+        assertEquals(88,actual);
+
+    }
+
+    @Test
+    public void CheckRandomPairs5(){
+        //arrange
+        BowlingGame bowlingObj = new BowlingGame();
+        //act
+        String[] scoringArr =  {"--", "5/", "4/", "53", "33", "22", "4/", "5/", "45", "X","X","X"};
+        // 14 13 12 11 10 20 20 14 18 18
+        int actual = bowlingObj.bowl(scoringArr);
+        //assert
+        assertEquals(115,actual);
+
+    }
 }
