@@ -168,17 +168,17 @@ class BowlingGameTest {
         assertEquals(86,actual);
     }
 
-//    @Test
-//    public void CheckRandomPairs2(){
-//        //arrange
-//        BowlingGame bowlingObj = new BowlingGame();
-//        //act
-//        String[] scoringArr =  {"5/", "4/", "3/", "2/", "1/", "-/", "X", "9/", "4/", "8/","8"};
-//        // 14 13 12 11 20 19 14 18 8
-//        int actual = bowlingObj.bowl(scoringArr);
-//        //assert
-//        assertEquals(150,actual);
-//
-//    }
+    @Test
+    public void CheckRandomPairs2(){
+        //arrange
+        BowlingGame bowlingObj = new BowlingGame();
+        //act
+        String[] scoringArr =  {"5/", "4/", "3/", "2/", "1/", "-/", "X", "9/", "4/", "8/","8"};
+        // 14 13 12 11 10 20 20 14 18 18
+        int actual = bowlingObj.bowl(scoringArr);
+        //assert
+        assertEquals(150,actual);
+
+    }
 
 }
