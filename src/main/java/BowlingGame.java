@@ -14,9 +14,9 @@ public class BowlingGame{
     private static final HashMap<Character,Integer> scoreHashMap = new HashMap<>();
 
     private static HashMap<Character,Integer> scoreMap(){
-        scoreHashMap.put('X',10);
-        scoreHashMap.put('-',0);
-        scoreHashMap.put('/',0);
+        scoreHashMap.put(STRIKE,10);
+        scoreHashMap.put(MISS,0);
+        scoreHashMap.put(SPARE,0);
         return scoreHashMap;
     }
 
